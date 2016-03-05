@@ -1,0 +1,49 @@
+
+body
+    font-family: 'Roboto', sans-serif
+
+.sidebar
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    padding: 20px
+    overflow-x: hidden
+    overflow-y: auto
+    background-color: #323948
+    color: #F8F8F8
+
+@media (max-width: 34em)
+    .sidebar
+        width: 250px
+        transform: translate3d(-250px,0,0)
+
+@media (min-width: 34em)
+    .sidebar
+        transform: none
+
+.main
+    background-color: whitesmoke
+    height: 100%
+
+.content
+    padding-top: 15px
+
+.header
+    padding-left: 0
+    padding-right: 0
+
+nav
+    box-shadow: 0px 2px 5px rgba(0,0,0.1,0.25)
+    a
+        line-height: 38px
+
+.label-heading
+    font-weight: 600
+    display: block
+
+.infobox
+    display: inline-block
+    margin-right: 20px
+    margin-bottom: 20px
+    min-width: 150px
