@@ -1,4 +1,6 @@
 import React from 'react';
+import FlatButton from 'material-ui/lib/flat-button';
+import RaisedButton from 'material-ui/lib/raised-button';
 
 export default class NewPost extends React.Component {
 
@@ -34,6 +36,8 @@ export default class NewPost extends React.Component {
         return (
             <div>
                 <h1>New Post</h1>
+                <FlatButton label="Cancel" />
+                <RaisedButton primary={true} label="Submit" />
             </div>
         );
     }

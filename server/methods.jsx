@@ -4,6 +4,19 @@ import Moment from 'moment';
 const APRETASTE_URL = "https://apretaste.com/run/api/"  
 
 Meteor.methods({
+
+    currentUserPhotoURL(){
+        var URL = "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture?type=large";
+        console.log("Return " + URL);
+        return URL;
+    },
+
+    getProfileInfo(email){
+        //this.unblock();
+        var result = HTTP.get(APRETASTE_URL, {params : {subject : "perfil " + email}});
+        var jsonData = JSON.parse(result.content);
+        return jsonData.profile;
+    },
     
     updatePizarraLast50(){
         this.unblock();
@@ -34,6 +47,14 @@ Meteor.methods({
         _.each(newPosts, (post) => {
             Posts.upsert(post._id, post);
         }, this);
+    },
+
+    postMessage(message, userEmail){
+        this.unblock();
+        var data = "pizarra " + message;
+        var email = userEmail;
+        var response = HTTP.post(APRETASTE_URL, {params: {subject : data, email: email}});
+        return response;
     },
 
     getPizarraLastPublic50(){

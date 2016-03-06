@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "formsy-material-ui": "^0.3.8",
+    "formsy-react": "^0.17.0",
     "history": "^1.17.0",
     "material-ui": "^0.14.4",
     "moment": "^2.11.2",

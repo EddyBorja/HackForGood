@@ -29,3 +29,6 @@ http
 percolate:synced-cron
 random
 jparker:crypto-md5
+accounts-facebook
+accounts-twitter
+service-configuration

@@ -14,13 +14,17 @@ import AppNotFound from './components/pages/AppNotFound.jsx';
 import Login from './components/pages/Login.jsx';
 import Signup from './components/pages/Signup.jsx';
 import PizarraPublic from './components/pages/PizarraPublic.jsx';
+import NewPost from './components/pages/NewPost.jsx';
+import Profile from './components/pages/Profile.jsx';
 
 var Routes = (
     <Route path="/" component={App}>
-        <IndexRoute component={Index} />
+        <IndexRoute component={PizarraPublic} />
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/testPage" component={PizarraPublic}/>
+        <Route path="/new/post" component={NewPost} />
+        <Route path="/edit/profile" component={Profile} />
         <Route path="*" component={AppNotFound}/>
     </Route>
 )
